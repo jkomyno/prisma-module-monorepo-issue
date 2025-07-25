@@ -1,11 +1,10 @@
-import styles from "./page.module.css";
-import { db } from "db"
-import Link from "next/link";
+import styles from "../page.module.css";
+import { getPosts } from "./getPosts";
 
 
 export default async function Home() {
 
-  const posts = await db.post.findMany()
+  const { posts } = await getPosts()
 
   return (
     <div className={styles.page}>
@@ -22,7 +21,6 @@ export default async function Home() {
           </div>
         })}
       </main>
-      <Link href="/posts-from-server-action">POSTS FROM SERVER ACTION</Link>
 
     </div>
   );
