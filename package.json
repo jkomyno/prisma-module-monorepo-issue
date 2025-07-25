@@ -5,7 +5,9 @@
   "private": true,
   "workspaces": ["packages/*"],
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "add": "^2.0.6",
+    "tsx": "^4.20.3"
   },
   "peerDependencies": {
     "typescript": "^5"
