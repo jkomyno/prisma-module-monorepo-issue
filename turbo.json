@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "ui": "tui",
+  "tasks": {
+    "db:deploy": {
+      "cache": false
+    },
+    "db:reset": {
+      "cache": false
+    },
+    "db:generate": {
+      "cache": false,
+      "dependsOn": ["^db:deploy"]
+    },
+    "db:migrate": {
+      "cache": false,
+      "interactive": true
+    },
+    "db:drop": {
+      "cache": false
+    },
+    "dev": {
+      "dependsOn": ["^db:generate"],
+      "cache": false
+    }
+  }
+}
