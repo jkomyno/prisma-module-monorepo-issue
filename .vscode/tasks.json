@@ -1,0 +1,16 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Start Project Diet-it",
+      "detail": "Starts the back-end and front-end project in a single terminal",
+      "type": "shell",
+      "command": "env $(cat .env | xargs) turbo run dev",
+      "runOptions": {
+        "instanceLimit": 1,
+        "runOn": "default"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
