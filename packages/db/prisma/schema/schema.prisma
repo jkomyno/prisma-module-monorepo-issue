@@ -1,0 +1,20 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["strictUndefinedChecks"]
+  output          = "../../generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id         String   @id @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  title      String
+  content    String
+
+  @@map("post")
+}

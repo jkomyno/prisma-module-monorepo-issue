@@ -1,6 +1,9 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": [".env"],
+    "globalEnv": [
+    "DATABASE_URL"
+  ],
   "ui": "tui",
   "tasks": {
     "db:deploy": {

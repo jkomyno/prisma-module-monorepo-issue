@@ -1,0 +1,32 @@
+{
+  "name": "db",
+  "version": "1.0.50",
+  "type": "module",
+  "scripts": {
+
+    "db:deploy": "prisma migrate deploy",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "@prisma/client": "^6.9.0",
+    "remove": "^0.1.5"
+  },
+  "devDependencies": {
+    "csv-parser": "^3.2.0",
+    "prisma": "^6.9.0"
+  },
+  "main": "index.ts",
+  "types": "index.ts",
+  "prisma": {
+    "schema": "./prisma/schema"
+  },
+  "files": [
+    "generated",
+    "prisma"
+  ],
+  "exports": {
+    ".": "./index.ts"
+  }
+}

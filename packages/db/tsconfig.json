@@ -1,0 +1,14 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"isolatedModules": true,
+		"incremental": true,
+
+		"paths": {
+			"@/*": ["./*"]
+		},
+		"composite": true,
+		"declarationMap": true
+	},
+	"exclude": ["node_modules"]
+}

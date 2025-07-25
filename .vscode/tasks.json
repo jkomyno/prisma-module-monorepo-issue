@@ -11,6 +11,39 @@
         "runOn": "default"
       },
       "problemMatcher": []
-    }
+    },
+    {
+      "label": "🗃️ Deploy Migrations",
+      "detail": "Applies all pending migrations to the database",
+      "type": "shell",
+      "command": "env $(cat .env | xargs) turbo run db:deploy",
+      "runOptions": {
+        "instanceLimit": 1,
+        "runOn": "default"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "🧩 Generate Prisma Client",
+      "detail": "Creates the Prisma client for database interactions",
+      "type": "shell",
+      "command": "env $(cat .env | xargs) turbo run db:generate",
+      "runOptions": {
+        "instanceLimit": 1,
+        "runOn": "default"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "📦 Create Migration",
+      "detail": "Creates and applies a new migration for the database",
+      "type": "shell",
+      "command": "env $(cat .env | xargs) turbo run db:migrate",
+      "runOptions": {
+        "instanceLimit": 1,
+        "runOn": "default"
+      },
+      "problemMatcher": []
+    },
   ]
 }
