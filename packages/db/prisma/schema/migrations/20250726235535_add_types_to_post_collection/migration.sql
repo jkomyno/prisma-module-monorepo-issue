@@ -1,0 +1,5 @@
+-- CreateEnum
+CREATE TYPE "POST_TYPE" AS ENUM ('SOUR', 'BITTER', 'SWEET');
+
+-- AlterTable
+ALTER TABLE "post" ADD COLUMN     "post_type" "POST_TYPE" NOT NULL DEFAULT 'SWEET';

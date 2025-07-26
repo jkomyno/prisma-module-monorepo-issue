@@ -3,6 +3,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "./getPosts";
 import { notFound } from "next/navigation";
+import { POST_TYPE } from "db"
+
 
 export const PostList = () => {
 
@@ -14,6 +16,8 @@ export const PostList = () => {
   if (!data) {
     notFound()
   }
+
+  console.log("POST_TYPE", POST_TYPE)
 
   return <main>
     {data.posts.map((post, i) => {

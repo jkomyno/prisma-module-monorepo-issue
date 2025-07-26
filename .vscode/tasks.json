@@ -5,7 +5,7 @@
       "label": "🚀 Start Project Diet-it",
       "detail": "Starts the back-end and front-end project in a single terminal",
       "type": "shell",
-      "command": "env $(cat .env | xargs) NODE_OPTIONS='--import tsx' turbo run dev",
+      "command": "env $(cat .env | xargs) turbo run dev",
       "runOptions": {
         "instanceLimit": 1,
         "runOn": "default"

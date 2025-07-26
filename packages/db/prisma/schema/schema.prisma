@@ -9,12 +9,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum POST_TYPE {
+  SOUR
+  BITTER
+  SWEET
+}
+
 model Post {
-  id         String   @id @unique
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
+  id         String    @id @unique
+  created_at DateTime  @default(now())
+  updated_at DateTime  @updatedAt
   title      String
   content    String
+  post_type  POST_TYPE @default(SWEET)
 
   @@map("post")
 }
