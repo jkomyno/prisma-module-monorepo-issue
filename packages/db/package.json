@@ -2,8 +2,8 @@
   "name": "db",
   "version": "1.0.50",
   "type": "module",
+  "sideEffects": false,
   "scripts": {
-
     "db:deploy": "prisma migrate deploy",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev"
