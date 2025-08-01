@@ -1,7 +1,7 @@
 "use server";
 
-import { db } from "db";
-import { POST_TYPE, Prisma } from "db"
+import { db, Prisma } from "db";
+import { POST_TYPE } from "db/enums"
 
 export async function getPosts() {
   const posts = await db.post.findMany()

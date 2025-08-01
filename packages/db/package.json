@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@faker-js/faker": "^9.0.3",
-    "@prisma/client": "^6.9.0",
+    "@prisma/client": "6.12.0",
     "remove": "^0.1.5"
   },
   "devDependencies": {
     "csv-parser": "^3.2.0",
-    "prisma": "^6.9.0"
+    "prisma": "6.12.0"
   },
   "main": "index.ts",
   "types": "index.ts",
@@ -27,6 +27,7 @@
     "prisma"
   ],
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./enums": "./enums.ts"
   }
 }

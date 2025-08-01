@@ -3,7 +3,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { getPosts } from "./getPosts";
 import { notFound } from "next/navigation";
-import { POST_TYPE } from "db"
+import { POST_TYPE } from "db/enums";
 
 
 export const PostList = () => {
